@@ -20,7 +20,6 @@ function nextSequence() {
       randomNumber = ran();
       randomChosenColours = buttonColours[randomNumber];
       gamePattern.push(randomChosenColours);
-      console.log("d" + randomNumber + randomChosenColours);
       $("#" + randomChosenColours).fadeIn(100).fadeOut(100).fadeIn(100);
       playSound(randomChosenColours);
     }, (i + 1) * 600);
@@ -35,7 +34,6 @@ function ran() {
 $(".btn").click(function() {
 
   var userChosenColor = $(this).attr("id");
-  console.log("U" + userChosenColor);
   userClickedPattern.push(userChosenColor);
   playSound(userChosenColor);
   animatePress(userChosenColor);
